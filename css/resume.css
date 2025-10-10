@@ -1,0 +1,199 @@
+/* Variables pour les couleurs */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #2980b9;
+    --text-color: #333;
+    --background-light: #f5f6fa;
+    --shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Style de base */
+html {
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: var(--background-light);
+    color: var(--text-color);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 2rem;
+}
+
+/* Container principal */
+#wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+/* En-tête */
+header {
+    position: relative;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+header img {
+    position: relative;
+    z-index: 100;
+}
+
+h1 {
+    font-family: abril-fatface, serif;
+    font-weight: normal;
+    font-size: 2.8em;
+    margin: 0;
+    color: var(--primary-color);
+    letter-spacing: 0.02em;
+}
+
+h2 {
+    font-size: 1.4em;
+    color: var(--secondary-color);
+    margin: 0.5em 0 1.5em;
+    font-weight: 400;
+}
+
+header img {
+    float: right;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--secondary-color);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.05);
+}
+
+/* Liste des coordonnées */
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+header ul li {
+    display: inline-block;
+    margin-right: 2rem;
+    color: var(--text-color);
+}
+
+header ul li i {
+    color: var(--secondary-color);
+    margin-right: 0.5rem;
+}
+
+/* Sections */
+section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 6px;
+    transition: transform 0.2s ease;
+}
+
+section:hover {
+    transform: translateX(5px);
+}
+
+h3 {
+    color: var(--primary-color);
+    font-size: 1.6em;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    font-weight: 600;
+}
+
+/* Expérience et Formation */
+.experience-item, .formation-item {
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--secondary-color);
+}
+
+.date {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1em;
+}
+
+/* Compétences */
+.competences {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.competence-item {
+    background: var(--background-light);
+    padding: 1rem;
+    border-radius: 6px;
+    border-left: 3px solid var(--secondary-color);
+}
+
+.competence-item h4 {
+    color: var(--primary-color);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+/* Liens */
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    #wrapper {
+        padding: 1rem;
+    }
+
+    header img {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem;
+    }
+
+    header ul li {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>   
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Mon CV</title>
+    <meta name="description" content="A propos de moi">
+    <meta name="keywords" content="web.developer.resume">
+    <meta name="author" content="Mon Nom">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://use.edgefonts.net/abril-fatface.js"></script>
+</head> 
+ 
+<body itemscope itemtype="https://schema.org/Person">
+    <header>
+        <h1 itemprop="name">Thomas Martin</h1>
+        <h2 itemprop="jobTitle">Étudiant en Informatique</h2>
+        <img itemprop="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK95IhX33SkesPL5WNZjbe-8d3qtHzuZefs3vs6GCo4vU8zdxliUdCZdDAu36lJ-fyDkw&usqp=CAU" alt="Photo de profil" width="150" height="150">
+        <ul>
+            <li><strong>Nom :</strong> <span itemprop="familyName">Martin</span></li>
+            <li><strong>Prénom :</strong> <span itemprop="givenName">Thomas</span></li>
+            <li><strong>Adresse :</strong> <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <span itemprop="streetAddress">15 Rue Kerabecam</span>,
+                <span itemprop="postalCode">29200</span>
+                <span itemprop="addressLocality">Brest</span>
+            </span></li>
+            <li><strong>Date de naissance :</strong> <span itemprop="birthDate">15/03/2002</span> (23 ans)</li>
+            <li><strong>Email :</strong> <a itemprop="email" href="mailto:thomas.martin@etudiant.univ-brest.fr">thomas.martin@etudiant.univ-brest.fr</a></li>
+            <li><strong>Nationalité :</strong> <span itemprop="nationality">Française</span></li>
+        </ul>
+    </header>
+    <main>
+        <section>
+            <h2><i class="fa fa-camera-retro"></i> Présentation</h2>
+            <p itemprop="description">Passionné d'informatique et étudiant à l'UBO, je suis particulièrement intéressé par l'intelligence artificielle et le développement mobile. Ma curiosité naturelle et mon esprit d'équipe font de moi un collaborateur dynamique et engagé.</p>
+        </section>
+      
+        <article>
+            <h2> <i class="fa fa-briefcase"></i> Expériences Professionnelles</h2>
+            <ul>
+                <li itemprop="hasOccupation" itemscope itemtype="https://schema.org/Occupation">
+                    <strong itemprop="occupationTitle">Stagiaire Développeur Mobile</strong> – 
+                    <span itemprop="employerOrganization">Océanopolis Tech</span>
+                    (<span itemprop="startDate">Juin 2024</span> - <span itemprop="endDate">Août 2024</span>)
+                    <br>
+                    <span itemprop="description">Développement d'une application mobile de visite guidée en React Native.</span>
+                </li>
+                <li itemprop="hasOccupation" itemscope itemtype="https://schema.org/Occupation">
+                    <strong itemprop="occupationTitle">Assistant Développeur</strong> – 
+                    <span itemprop="employerOrganization">BreizhTech Solutions</span>
+                    (<span itemprop="startDate">Juillet 2023</span>)
+                    <br>
+                    <span itemprop="description">Participation au développement d'une application web avec Angular.</span>
+                </li>
+            </ul>
+        </article>
+
+        <section>
+            <h2> <i class="fa fa-cogs"></i> Compétences</h2>
+            <dl>
+                <dt itemprop="knowsAbout">React Native / Angular</dt>
+                <dd>Développement d'applications mobiles et web modernes</dd>
+                <dt itemprop="knowsAbout">Python / TensorFlow</dt>
+                <dd>Machine Learning et traitement de données</dd>
+                <dt itemprop="knowsAbout">Java / Spring Boot</dt>
+                <dd>Développement backend et APIs</dd>
+                <dt itemprop="knowsAbout">Docker / Git</dt>
+                <dd>DevOps et gestion de versions</dd>
+            </dl>
+        </section>
+
+        <section>
+            <h2><i class="fa fa-graduation-cap"></i> Formation</h2>
+            <ul>
+                <li itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+                    <strong>Master Informatique</strong> – <span itemprop="name">Université de Bretagne Occidentale</span> (2024 - Présent)
+                    <br>
+                    <span itemprop="programName">Spécialisation en Intelligence Artificielle et Applications</span>
+                </li>
+                <li itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+                    <strong>Licence Informatique</strong> – <span itemprop="name">Université de Bretagne Occidentale</span> (2021 - 2024)
+                    <br>
+                    Mention Bien
+                </li>
+                <li>
+                    <strong>Baccalauréat Scientifique</strong> – Lycée Amiral Ronarc'h, Brest (2021)
+                    <br>
+                    Spécialité Mathématiques, Mention Très Bien
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2><i class="fa fa-language"></i>Langues</h2>
+            <ul>
+                <li>Français (langue maternelle)</li>
+                <li>Anglais (courant)</li>
+                <li>Espagnol (notions)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2><i class="fa fa-heart"></i>Centres d'intérêt</h2>
+            <ul>
+                <li>Participation à des hackathons</li>
+                <li>Photographie numérique</li>
+                <li>Voile et sports nautiques</li>
+                <li>Musique (Guitare)</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <h2><i class="fa fa-share-alt"></i> Retrouvez-moi sur</h2>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/thomas-martin-dev" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/mohamed-barbych" target="_blank">GitHub</a></li>
+            <li><a href="https://twitter.com/mohamed_barbych" target="_blank">Twitter</a></li>
+            <li><a href="https://www.flickr.com/people/mohamed-barbych" target="_blank">Flickr</a></li>
+        </ul>
+        <p>Page réalisée par Mohamed Barbych. Dernière mise à jour : juin 2024.</p>
+        <p>Ce CV est une présentation personnelle à usage académique.</p>
+    </footer>
+</body>

@@ -1,0 +1,20 @@
+@media only screen and (max-width: 480px) {
+    #wrapper { 
+        width: 100%;
+    }
+    
+    header img {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .competences {
+        width: 100%;
+        display: block;
+    }
+
+    h1, h2, h3 {
+        text-align: center;
+    }
+}
