@@ -14,38 +14,46 @@
     <script src="https://use.edgefonts.net/abril-fatface.js"></script>
 </head> 
  
-<body>
+<body itemscope itemtype="https://schema.org/Person">
     <header>
-        <h1>Thomas Martin</h1>
-        <h2>Étudiant en Informatique</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK95IhX33SkesPL5WNZjbe-8d3qtHzuZefs3vs6GCo4vU8zdxliUdCZdDAu36lJ-fyDkw&usqp=CAU" alt="Photo de profil" width="150" height="150">
+        <h1 itemprop="name">Thomas Martin</h1>
+        <h2 itemprop="jobTitle">Étudiant en Informatique</h2>
+        <img itemprop="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK95IhX33SkesPL5WNZjbe-8d3qtHzuZefs3vs6GCo4vU8zdxliUdCZdDAu36lJ-fyDkw&usqp=CAU" alt="Photo de profil" width="150" height="150">
         <ul>
-            <li><strong>Nom :</strong> Martin</li>
-            <li><strong>Prénom :</strong> Thomas</li>
-            <li><strong>Adresse :</strong> 15 Rue Kerabecam, 29200 Brest</li>
-            <li><strong>Date de naissance :</strong> 15/03/2002 (23 ans)</li>
-            <li><strong>Email :</strong> thomas.martin@etudiant.univ-brest.fr</li>
-            <li><strong>Nationalité :</strong> Française</li>
+            <li><strong>Nom :</strong> <span itemprop="familyName">Martin</span></li>
+            <li><strong>Prénom :</strong> <span itemprop="givenName">Thomas</span></li>
+            <li><strong>Adresse :</strong> <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <span itemprop="streetAddress">15 Rue Kerabecam</span>,
+                <span itemprop="postalCode">29200</span>
+                <span itemprop="addressLocality">Brest</span>
+            </span></li>
+            <li><strong>Date de naissance :</strong> <span itemprop="birthDate">15/03/2002</span> (23 ans)</li>
+            <li><strong>Email :</strong> <a itemprop="email" href="mailto:thomas.martin@etudiant.univ-brest.fr">thomas.martin@etudiant.univ-brest.fr</a></li>
+            <li><strong>Nationalité :</strong> <span itemprop="nationality">Française</span></li>
         </ul>
     </header>
     <main>
         <section>
             <h2><i class="fa fa-camera-retro"></i> Présentation</h2>
-            <p>Passionné d'informatique et étudiant à l'UBO, je suis particulièrement intéressé par l'intelligence artificielle et le développement mobile. Ma curiosité naturelle et mon esprit d'équipe font de moi un collaborateur dynamique et engagé.</p>
+            <p itemprop="description">Passionné d'informatique et étudiant à l'UBO, je suis particulièrement intéressé par l'intelligence artificielle et le développement mobile. Ma curiosité naturelle et mon esprit d'équipe font de moi un collaborateur dynamique et engagé.</p>
         </section>
       
         <article>
             <h2> <i class="fa fa-briefcase"></i> Expériences Professionnelles</h2>
             <ul>
-                <li>
-                    <strong>Stagiaire Développeur Mobile</strong> – Océanopolis Tech (Juin 2024 - Août 2024)
+                <li itemprop="hasOccupation" itemscope itemtype="https://schema.org/Occupation">
+                    <strong itemprop="occupationTitle">Stagiaire Développeur Mobile</strong> – 
+                    <span itemprop="employerOrganization">Océanopolis Tech</span>
+                    (<span itemprop="startDate">Juin 2024</span> - <span itemprop="endDate">Août 2024</span>)
                     <br>
-                    Développement d'une application mobile de visite guidée en React Native.
+                    <span itemprop="description">Développement d'une application mobile de visite guidée en React Native.</span>
                 </li>
-                <li>
-                    <strong>Assistant Développeur</strong> – BreizhTech Solutions (Juillet 2023)
+                <li itemprop="hasOccupation" itemscope itemtype="https://schema.org/Occupation">
+                    <strong itemprop="occupationTitle">Assistant Développeur</strong> – 
+                    <span itemprop="employerOrganization">BreizhTech Solutions</span>
+                    (<span itemprop="startDate">Juillet 2023</span>)
                     <br>
-                    Participation au développement d'une application web avec Angular.
+                    <span itemprop="description">Participation au développement d'une application web avec Angular.</span>
                 </li>
             </ul>
         </article>
@@ -53,13 +61,13 @@
         <section>
             <h2> <i class="fa fa-cogs"></i> Compétences</h2>
             <dl>
-                <dt>React Native / Angular</dt>
+                <dt itemprop="knowsAbout">React Native / Angular</dt>
                 <dd>Développement d'applications mobiles et web modernes</dd>
-                <dt>Python / TensorFlow</dt>
+                <dt itemprop="knowsAbout">Python / TensorFlow</dt>
                 <dd>Machine Learning et traitement de données</dd>
-                <dt>Java / Spring Boot</dt>
+                <dt itemprop="knowsAbout">Java / Spring Boot</dt>
                 <dd>Développement backend et APIs</dd>
-                <dt>Docker / Git</dt>
+                <dt itemprop="knowsAbout">Docker / Git</dt>
                 <dd>DevOps et gestion de versions</dd>
             </dl>
         </section>
@@ -67,13 +75,13 @@
         <section>
             <h2><i class="fa fa-graduation-cap"></i> Formation</h2>
             <ul>
-                <li>
-                    <strong>Master Informatique</strong> – Université de Bretagne Occidentale (2024 - Présent)
+                <li itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+                    <strong>Master Informatique</strong> – <span itemprop="name">Université de Bretagne Occidentale</span> (2024 - Présent)
                     <br>
-                    Spécialisation en Intelligence Artificielle et Applications
+                    <span itemprop="programName">Spécialisation en Intelligence Artificielle et Applications</span>
                 </li>
-                <li>
-                    <strong>Licence Informatique</strong> – Université de Bretagne Occidentale (2021 - 2024)
+                <li itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+                    <strong>Licence Informatique</strong> – <span itemprop="name">Université de Bretagne Occidentale</span> (2021 - 2024)
                     <br>
                     Mention Bien
                 </li>
