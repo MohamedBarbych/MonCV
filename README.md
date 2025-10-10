@@ -1,6 +1,31 @@
-# CV en ligne - Projet HTML5/CSS3
+# 🚀 CV en ligne - Mohamed BARBYCH
 
-Ce projet est un CV en ligne responsive utilisant les technologies web modernes. Il a été développé dans le cadre du TP HTML - UE Développement Clients Web.
+<div align="center">
+  <h1>
+    <a href="https://mohamedbarbych.github.io/MonCV/">
+      <img src="https://readme-typing-svg.herokuapp.com/?lines=Bienvenue+sur+mon+CV+en+ligne;Développeur+Full+Stack;Étudiant+en+Informatique&center=true&size=30&color=2980b9">
+    </a>
+  </h1>
+
+  [![Visiter le CV](https://img.shields.io/badge/🌐_Visiter_le_CV-Github_Pages-2980b9?style=for-the-badge)](https://mohamedbarbych.github.io/MonCV/)
+  [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/HTML)
+  [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/CSS)
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MohamedBarbych/MonCV)
+</div>
+
+## 📸 Aperçu
+
+<div align="center">
+  <img src="screenshots/cv-desktop.png" alt="Version Desktop" width="600"/>
+  <p><em>Version Desktop du CV</em></p>
+  
+  <img src="screenshots/cv-mobile.png" alt="Version Mobile" width="300"/>
+  <p><em>Version Mobile du CV</em></p>
+</div>
+
+## 🎯 À propos du projet
+
+Ce CV en ligne a été développé dans le cadre du TP HTML/CSS de l'UE Développement Clients Web à l'Université de Bretagne Occidentale. Il met en œuvre les dernières technologies web et les meilleures pratiques de développement.
 
 ## 1. Structure HTML
 
@@ -90,25 +115,66 @@ Le projet utilise des tags pour marquer les étapes importantes :
 - `responsive` : Implémentation du design responsive
 - `microdata` : Intégration des micro-données
 
-## Technologies utilisées
+## ✨ Fonctionnalités
 
-- HTML5
-- CSS3
-- Font Awesome
-- Adobe Edge Fonts
-- GitHub Pages
-- Schema.org
+### 🏗️ Structure HTML5 Moderne
+- Architecture sémantique avec HTML5
+- Organisation claire et professionnelle
+- Intégration des micro-données Schema.org
 
-## Installation et développement
+### 🎨 Design Responsive
+- Adaptation automatique à tous les écrans
+- Breakpoints optimisés
+- Expérience utilisateur fluide
 
-1. Cloner le repository :
+### 🚀 Déploiement Continu
+- Intégration avec GitHub Pages
+- Déploiement automatique
+- Workflow Git optimisé
+
+## 🛠️ Technologies Utilisées
+
+<div align="center">
+
+| Technologie | Utilisation |
+|-------------|-------------|
+| ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) | Structure sémantique |
+| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) | Styling et animations |
+| ![Font Awesome](https://img.shields.io/badge/Font_Awesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white) | Icônes et symboles |
+| ![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white) | Hébergement et versioning |
+
+</div>
+
+## 📝 Documentation
+
+### Installation
+
 ```bash
+# Cloner le repository
 git clone https://github.com/MohamedBarbych/MonCV.git
+
+# Accéder au dossier
+cd MonCV
+
+# Ouvrir dans VS Code
+code .
 ```
 
-2. Ouvrir le fichier `index.html` dans un navigateur
+### Structure du Projet
 
-3. Pour développer :
-   - Modifier `index.html` pour la structure
-   - Modifier `css/resume.css` pour les styles
-   - Modifier `css/responsive.css` pour le responsive design
+```
+MonCV/
+├── css/
+│   ├── resume.css      # Styles principaux
+│   └── responsive.css   # Styles responsives
+├── screenshots/        # Captures d'écran
+├── index.html         # Page principale
+└── README.md         # Documentation
+```
+
+## 🌟 Points Forts
+
+- ♿ **Accessibilité** : Respect des normes WCAG
+- 📱 **Responsive** : S'adapte à tous les appareils
+- 🔍 **SEO** : Optimisé pour les moteurs de recherche
+- 🚀 **Performance** : Chargement rapide et optimisé
