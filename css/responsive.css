@@ -1,11 +1,16 @@
-@media only screen and (max-width: 740px) {
-    #wrapper { background: #f7f7; }
-}
-
-@media only screen and (max-width: 570px) {
-    #wrapper { background: #f7f7; }
-}
-
 @media only screen and (max-width: 480px) {
-    #wrapper { background: #f7f7; }
+    #wrapper { 
+        width: 100%;
+    }
+    
+    header img {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .competences {
+        width: 100%;
+        display: block;
+    }
 }
