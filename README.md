@@ -1,20 +1,22 @@
-# 🚀 CV en ligne - Mohamed BARBYCH
+# CV en ligne - Mohamed BARBYCH
 
 <div align="center">
   <h1>
     <a href="https://mohamedbarbych.github.io/MonCV/">
-      <img src="https://readme-typing-svg.herokuapp.com/?lines=Bienvenue+sur+mon+CV+en+ligne;Développeur+Full+Stack;Étudiant+en+Informatique&center=true&size=30&color=2980b9">
+      <img src="https://readme-typing-svg.herokuapp.com/?lines=Mohamed+BARBYCH&center=true&size=30&color=2980b9">
     </a>
   </h1>
 
-  [![Visiter le CV](https://img.shields.io/badge/🌐_Visiter_le_CV-Github_Pages-2980b9?style=for-the-badge)](https://mohamedbarbych.github.io/MonCV/)
   [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/HTML)
   [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/CSS)
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MohamedBarbych/MonCV)
 </div>
 
 ## 📸 Aperçu
-
+git add README.md screenshots/
+git commit -m "Amélioration majeure du README avec captures d'écran et animations"
+git push origin main
+git push gitlab-ubo tp-html
 <div align="center">
   <img src="screenshots/cv-desktop.png" alt="Version Desktop" width="600"/>
   <p><em>Version Desktop du CV</em></p>
@@ -115,37 +117,32 @@ Le projet utilise des tags pour marquer les étapes importantes :
 - `responsive` : Implémentation du design responsive
 - `microdata` : Intégration des micro-données
 
-## ✨ Fonctionnalités
+## Fonctionnalités
 
-### 🏗️ Structure HTML5 Moderne
+### Structure HTML5
 - Architecture sémantique avec HTML5
 - Organisation claire et professionnelle
 - Intégration des micro-données Schema.org
 
-### 🎨 Design Responsive
+### Design Responsive
 - Adaptation automatique à tous les écrans
 - Breakpoints optimisés
 - Expérience utilisateur fluide
 
-### 🚀 Déploiement Continu
+### Déploiement
 - Intégration avec GitHub Pages
 - Déploiement automatique
 - Workflow Git optimisé
 
-## 🛠️ Technologies Utilisées
+## Technologies Utilisées
 
-<div align="center">
+- HTML5 : Structure sémantique
+- CSS3 : Mise en forme et animations
+- Font Awesome : Icônes
+- GitHub Pages : Hébergement
+- Schema.org : Micro-données
 
-| Technologie | Utilisation |
-|-------------|-------------|
-| ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) | Structure sémantique |
-| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) | Styling et animations |
-| ![Font Awesome](https://img.shields.io/badge/Font_Awesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white) | Icônes et symboles |
-| ![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white) | Hébergement et versioning |
-
-</div>
-
-## 📝 Documentation
+## Documentation
 
 ### Installation
 
@@ -172,9 +169,9 @@ MonCV/
 └── README.md         # Documentation
 ```
 
-## 🌟 Points Forts
+## Points Forts
 
-- ♿ **Accessibilité** : Respect des normes WCAG
-- 📱 **Responsive** : S'adapte à tous les appareils
-- 🔍 **SEO** : Optimisé pour les moteurs de recherche
-- 🚀 **Performance** : Chargement rapide et optimisé
+- **Accessibilité** : Respect des normes WCAG
+- **Responsive** : S'adapte à tous les appareils
+- **SEO** : Optimisé pour les moteurs de recherche
+- **Performance** : Chargement rapide et optimisé
