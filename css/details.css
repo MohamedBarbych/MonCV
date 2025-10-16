@@ -25,7 +25,6 @@
     box-shadow: var(--shadow);
 }
 
-/* Styles spécifiques pour la section compétences */
 dl > div {
     margin-bottom: 20px;
     position: relative;
