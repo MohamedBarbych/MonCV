@@ -1,3 +1,14 @@
+let appData = null;
+
+async function loadData() {
+    try {
+        const response = await fetch('js/data.json');
+        appData = await response.json();
+    } catch (error) {
+        console.error('Erreur chargement data.json:', error);
+    }
+}
+
 function animateOpen(element) {
     element.style.display = "block";
     element.style.height = "0px";
@@ -5,7 +16,8 @@ function animateOpen(element) {
 
     const finalHeight = element.scrollHeight;
     let currentHeight = 0;
-    const increment = finalHeight / 20;
+    const config = appData ? appData.animationConfig : { steps: 20, interval: 20 };
+    const increment = finalHeight / config.steps;
 
     const interval = setInterval(function() {
         currentHeight += increment;
@@ -16,7 +28,7 @@ function animateOpen(element) {
         } else {
             element.style.height = currentHeight + "px";
         }
-    }, 20);
+    }, config.interval);
 }
 
 function closeDescription(element) {
@@ -50,11 +62,10 @@ function toggleDescription(event) {
 
 function updateTooltipPosition(event) {
     const tooltip = document.getElementById('active-tooltip');
-    if (tooltip) {
-        const offsetX = 15;
-        const offsetY = 15;
-        tooltip.style.left = (event.pageX + offsetX) + 'px';
-        tooltip.style.top = (event.pageY + offsetY) + 'px';
+    if (tooltip && appData) {
+        const config = appData.animationConfig;
+        tooltip.style.left = (event.pageX + config.tooltipOffsetX) + 'px';
+        tooltip.style.top = (event.pageY + config.tooltipOffsetY) + 'px';
     }
 }
 
@@ -70,9 +81,10 @@ function showTooltip(event) {
     document.body.appendChild(tooltip);
     updateTooltipPosition(event);
 
+    const delay = appData ? appData.animationConfig.tooltipDelay : 10;
     setTimeout(function() {
         tooltip.classList.add('show');
-    }, 10);
+    }, delay);
 
     skillName.addEventListener('mousemove', updateTooltipPosition);
 }
@@ -81,23 +93,17 @@ function hideTooltip(event) {
     const tooltip = document.getElementById('active-tooltip');
     if (tooltip) {
         tooltip.classList.remove('show');
+        const fadeOut = appData ? appData.animationConfig.tooltipFadeOut : 300;
         setTimeout(function() {
             if (tooltip.parentNode) {
                 tooltip.parentNode.removeChild(tooltip);
             }
-        }, 300);
+        }, fadeOut);
     }
 
     const skillName = event.currentTarget;
     skillName.removeEventListener('mousemove', updateTooltipPosition);
 }
-
-const skillRatings = {
-    "React Native / Angular": 4,
-    "Python / TensorFlow": 3,
-    "Java / Spring Boot": 4,
-    "Docker / Git": 5
-};
 
 function displayStars(rating) {
     let stars = '';
@@ -112,18 +118,20 @@ function displayStars(rating) {
 }
 
 function addStarsToSkills() {
+    if (!appData) return;
+
     const skillItems = document.querySelectorAll('.skill-item');
 
     skillItems.forEach(item => {
         const skillNameElement = item.querySelector('.skill-name');
         if (skillNameElement) {
             const skillName = skillNameElement.textContent;
-            const rating = skillRatings[skillName];
+            const skillData = appData.skills.find(s => s.name === skillName);
 
-            if (rating) {
+            if (skillData) {
                 const starsContainer = document.createElement('span');
                 starsContainer.className = 'stars-container';
-                starsContainer.innerHTML = displayStars(rating);
+                starsContainer.innerHTML = displayStars(skillData.rating);
 
                 const dt = item.querySelector('dt');
                 const button = dt.querySelector('.detail-btn');
@@ -135,12 +143,13 @@ function addStarsToSkills() {
 
 function drawSkillsChart() {
     const canvas = document.getElementById('skillsChart');
-    if (!canvas) return;
+    if (!canvas || !appData) return;
 
     const container = canvas.parentElement;
     const containerWidth = container.offsetWidth - 40;
-    canvas.width = containerWidth > 600 ? 600 : containerWidth;
-    canvas.height = 400;
+    const config = appData.chartConfig;
+    canvas.width = containerWidth > config.width ? config.width : containerWidth;
+    canvas.height = config.height;
 
     const ctx = canvas.getContext('2d');
     const width = canvas.width;
@@ -148,17 +157,17 @@ function drawSkillsChart() {
 
     ctx.clearRect(0, 0, width, height);
 
-    const skills = Object.keys(skillRatings);
-    const ratings = Object.values(skillRatings);
-    const maxRating = 5;
+    const skills = appData.skills.map(s => s.name);
+    const ratings = appData.skills.map(s => s.rating);
+    const maxRating = config.maxRating;
 
-    const barWidth = 80;
-    const barSpacing = 40;
+    const barWidth = config.barWidth;
+    const barSpacing = config.barSpacing;
     const chartHeight = height - 100;
     const chartBottom = height - 50;
     const startX = 50;
 
-    const colors = ['#3498db', '#e74c3c', '#2ecc71', '#f39c12'];
+    const colors = config.colors;
 
     ctx.fillStyle = '#333';
     ctx.font = 'bold 16px Arial';
@@ -220,7 +229,9 @@ function drawSkillsChart() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+async function initializeApp() {
+    await loadData();
+
     const detailButtons = document.querySelectorAll('.detail-btn');
     detailButtons.forEach(button => {
         button.addEventListener('click', toggleDescription);
@@ -238,4 +249,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', function() {
         drawSkillsChart();
     });
-});
+}
+
+document.addEventListener('DOMContentLoaded', initializeApp);

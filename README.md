@@ -1,5 +1,7 @@
 # CV en ligne - Mohamed BARBYCH
 
+Lien vers le CV en ligne : https://mohamedbarbych.github.io/MonCV/
+
 ## A propos du projet
 
 Ce CV en ligne a ete developpe dans le cadre du TP HTML/CSS/JavaScript de l'UE Developpement Clients Web a l'Universite de Bretagne Occidentale.

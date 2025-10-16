@@ -1,0 +1,40 @@
+{
+  "skills": [
+    {
+      "name": "React Native / Angular",
+      "rating": 4,
+      "tooltip": "Frameworks modernes pour applications cross-platform"
+    },
+    {
+      "name": "Python / TensorFlow",
+      "rating": 3,
+      "tooltip": "Intelligence artificielle et apprentissage automatique"
+    },
+    {
+      "name": "Java / Spring Boot",
+      "rating": 4,
+      "tooltip": "Développement d'applications backend robustes et scalables"
+    },
+    {
+      "name": "Docker / Git",
+      "rating": 5,
+      "tooltip": "Conteneurisation et gestion de versions pour le DevOps"
+    }
+  ],
+  "chartConfig": {
+    "width": 600,
+    "height": 400,
+    "barWidth": 80,
+    "barSpacing": 40,
+    "maxRating": 5,
+    "colors": ["#3498db", "#e74c3c", "#2ecc71", "#f39c12"]
+  },
+  "animationConfig": {
+    "steps": 20,
+    "interval": 20,
+    "tooltipDelay": 10,
+    "tooltipFadeOut": 300,
+    "tooltipOffsetX": 15,
+    "tooltipOffsetY": 15
+  }
+}
