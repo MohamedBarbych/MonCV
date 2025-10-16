@@ -1,177 +1,122 @@
 # CV en ligne - Mohamed BARBYCH
 
-<div align="center">
-  <h1>
-    <a href="https://mohamedbarbych.github.io/MonCV/">
-      <img src="https://readme-typing-svg.herokuapp.com/?lines=Mohamed+BARBYCH&center=true&size=30&color=2980b9">
-    </a>
-  </h1>
+## A propos du projet
 
-  [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/HTML)
-  [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/CSS)
-  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MohamedBarbych/MonCV)
-</div>
+Ce CV en ligne a ete developpe dans le cadre du TP HTML/CSS/JavaScript de l'UE Developpement Clients Web a l'Universite de Bretagne Occidentale.
 
-## 📸 Aperçu
-git add README.md screenshots/
-git commit -m "Amélioration majeure du README avec captures d'écran et animations"
-git push origin main
-git push gitlab-ubo tp-html
-<div align="center">
-  <img src="screenshots/cv-desktop.png" alt="Version Desktop" width="600"/>
-  <p><em>Version Desktop du CV</em></p>
-  
-  <img src="screenshots/cv-mobile.png" alt="Version Mobile" width="300"/>
-  <p><em>Version Mobile du CV</em></p>
-</div>
+## Structure HTML
 
-## 🎯 À propos du projet
-
-Ce CV en ligne a été développé dans le cadre du TP HTML/CSS de l'UE Développement Clients Web à l'Université de Bretagne Occidentale. Il met en œuvre les dernières technologies web et les meilleures pratiques de développement.
-
-## 1. Structure HTML
-
-### 1.1 Structure de base
-- Création d'un CV structuré en HTML5
-- Organisation en sections distinctes :
-  - Header : informations personnelles et photo
-  - Présentation
-  - Expériences professionnelles
-  - Compétences
+### Structure de base
+- CV structure en HTML5
+- Organisation en sections :
+  - Header avec informations personnelles et photo
+  - Presentation
+  - Experiences professionnelles
+  - Competences
   - Formation
   - Langues
-  - Centres d'intérêt
+  - Centres d'interet
   - Footer avec liens sociaux
 
-### 1.2 Éléments sémantiques
-- Utilisation des balises HTML5 sémantiques (`header`, `main`, `section`, `article`)
-- Structure hiérarchique claire avec des titres (`h1`, `h2`, etc.)
-- Utilisation appropriée des listes (`ul`, `dl`) pour organiser l'information
+### Elements semantiques
+- Balises HTML5 semantiques (header, main, section, article)
+- Structure hierarchique avec titres (h1, h2, etc.)
+- Utilisation de listes (ul, dl) pour organiser l'information
 
-## 2. Style CSS
+## Style CSS
 
-### 2.1 Mise en forme de base
-- Création du fichier `resume.css`
-- Définition des couleurs principales et variables CSS
-- Style du conteneur principal avec largeur maximale et centrage
-- Design moderne avec ombres et bordures arrondies
+### Mise en forme
+- Fichier resume.css avec couleurs principales et variables CSS
+- Conteneur principal avec largeur maximale et centrage
+- Design avec ombres et bordures arrondies
 
-### 2.2 Typographie
-- Intégration de la police Adobe Edge Fonts pour le titre principal
-- Utilisation de Font Awesome pour les icônes
-- Hiérarchie visuelle claire avec différentes tailles de texte
+### Typographie
+- Police Adobe Edge Fonts pour le titre principal
+- Font Awesome pour les icones
+- Hierarchie visuelle avec differentes tailles de texte
 
-### 2.3 Layout et composants
-- Photo de profil avec style distinctif
-- Sections bien espacées et visuellement séparées
-- Liste de compétences en grille
-- Footer avec liens sociaux stylisés
+### Layout
+- Photo de profil stylisee
+- Sections bien espacees
+- Liste de competences en grille
+- Footer avec liens sociaux
 
-## 3. Mise en ligne
+## Design Responsive
 
-### 3.1 GitHub Pages
-- Déploiement automatique via GitHub Actions
-- Configuration du workflow dans `.github/workflows/deploy.yml`
-- Site accessible à l'adresse : https://mohamedbarbych.github.io/MonCV/
-
-### 3.2 Déploiement automatique
-- Configuration des permissions GitHub
-- Déploiement automatique à chaque push sur la branche main
-- Utilisation des tags pour marquer les versions importantes
-
-## 4. Design Responsive
-
-### 4.1 Media Queries
-- Création du fichier `responsive.css`
-- Trois breakpoints principaux :
-  - 740px : Tablettes et écrans moyens
+### Media Queries
+- Fichier responsive.css
+- Breakpoints :
+  - 740px : Tablettes et ecrans moyens
   - 570px : Petites tablettes
   - 480px : Mobile
 
-### 4.2 Adaptations mobiles
-- Passage à une colonne unique sur mobile
-- Redimensionnement de la photo de profil
+### Adaptations mobiles
+- Colonne unique sur mobile
+- Redimensionnement de la photo
 - Centrage des titres
-- Adaptation des marges et espacements
+- Adaptation des marges
 
-## 5. Micro-données
+## Micro-donnees Schema.org
 
-### 5.1 Schema.org
-- Intégration des micro-données schema.org/Person
-- Balisage sémantique des informations personnelles
-- Structure des données pour :
-  - Informations personnelles
-  - Formation
-  - Expérience professionnelle
-  - Compétences
+- Integration des micro-donnees schema.org/Person
+- Balisage semantique des informations
+- Amelioration du referencement
 
-### 5.2 SEO
-- Amélioration du référencement avec les micro-données
-- Données structurées pour une meilleure visibilité dans les moteurs de recherche
+## JavaScript
+
+### Apparition des descriptions detaillees
+- Boutons +/- pour afficher/masquer les descriptions
+- Une seule description visible a la fois
+- Animation progressive avec setInterval
+
+### Tooltips
+- Tooltips au survol des competences
+- Suivi du curseur de la souris
+- Affichage dynamique avec setTimeout
+
+### Auto-evaluation
+- Systeme d'etoiles pour evaluer les competences (1 a 5)
+- Graphique en histogramme avec Canvas
+- Visualisation interactive des niveaux
 
 ## Tags Git
 
-Le projet utilise des tags pour marquer les étapes importantes :
-- `Structure` : Structure HTML de base
-- `CSS` : Ajout des styles
-- `responsive` : Implémentation du design responsive
-- `microdata` : Intégration des micro-données
+Le projet utilise des tags pour marquer les etapes :
+- Structure : Structure HTML de base
+- CSS : Ajout des styles
+- responsive : Design responsive
+- microdata : Integration des micro-donnees
+- description : Descriptions detaillees et tooltips
+- autoevaluation : Systeme d'etoiles et histogramme
 
-## Fonctionnalités
+## Technologies
 
-### Structure HTML5
-- Architecture sémantique avec HTML5
-- Organisation claire et professionnelle
-- Intégration des micro-données Schema.org
+- HTML5
+- CSS3
+- JavaScript
+- Font Awesome
+- Schema.org
 
-### Design Responsive
-- Adaptation automatique à tous les écrans
-- Breakpoints optimisés
-- Expérience utilisateur fluide
+## Structure du Projet
 
-### Déploiement
-- Intégration avec GitHub Pages
-- Déploiement automatique
-- Workflow Git optimisé
+```
+BARBYCH-Mohamed-CV/
+├── css/
+│   ├── resume.css
+│   ├── responsive.css
+│   ├── details.css
+│   └── skills.css
+├── js/
+│   └── details.js
+├── index.html
+└── README.md
+```
 
-## Technologies Utilisées
-
-- HTML5 : Structure sémantique
-- CSS3 : Mise en forme et animations
-- Font Awesome : Icônes
-- GitHub Pages : Hébergement
-- Schema.org : Micro-données
-
-## Documentation
-
-### Installation
+## Installation
 
 ```bash
-# Cloner le repository
-git clone https://github.com/MohamedBarbych/MonCV.git
-
-# Accéder au dossier
-cd MonCV
-
-# Ouvrir dans VS Code
-code .
+git clone https://gitlab-depinfo-2025.univ-brest.fr/dosi/dcw/barbych-mohamed.git
+cd barbych-mohamed
 ```
 
-### Structure du Projet
-
-```
-MonCV/
-├── css/
-│   ├── resume.css      # Styles principaux
-│   └── responsive.css   # Styles responsives
-├── screenshots/        # Captures d'écran
-├── index.html         # Page principale
-└── README.md         # Documentation
-```
-
-## Points Forts
-
-- **Accessibilité** : Respect des normes WCAG
-- **Responsive** : S'adapte à tous les appareils
-- **SEO** : Optimisé pour les moteurs de recherche
-- **Performance** : Chargement rapide et optimisé
+Ouvrir index.html dans un navigateur.

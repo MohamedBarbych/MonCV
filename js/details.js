@@ -137,6 +137,11 @@ function drawSkillsChart() {
     const canvas = document.getElementById('skillsChart');
     if (!canvas) return;
 
+    const container = canvas.parentElement;
+    const containerWidth = container.offsetWidth - 40;
+    canvas.width = containerWidth > 600 ? 600 : containerWidth;
+    canvas.height = 400;
+
     const ctx = canvas.getContext('2d');
     const width = canvas.width;
     const height = canvas.height;
@@ -229,4 +234,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     addStarsToSkills();
     drawSkillsChart();
+
+    window.addEventListener('resize', function() {
+        drawSkillsChart();
+    });
 });
