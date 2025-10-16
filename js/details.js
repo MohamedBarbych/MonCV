@@ -92,6 +92,129 @@ function hideTooltip(event) {
     skillName.removeEventListener('mousemove', updateTooltipPosition);
 }
 
+const skillRatings = {
+    "React Native / Angular": 4,
+    "Python / TensorFlow": 3,
+    "Java / Spring Boot": 4,
+    "Docker / Git": 5
+};
+
+function displayStars(rating) {
+    let stars = '';
+    for (let i = 1; i <= 5; i++) {
+        if (i <= rating) {
+            stars += '<span class="star filled">&#9733;</span>';
+        } else {
+            stars += '<span class="star empty">&#9733;</span>';
+        }
+    }
+    return stars;
+}
+
+function addStarsToSkills() {
+    const skillItems = document.querySelectorAll('.skill-item');
+
+    skillItems.forEach(item => {
+        const skillNameElement = item.querySelector('.skill-name');
+        if (skillNameElement) {
+            const skillName = skillNameElement.textContent;
+            const rating = skillRatings[skillName];
+
+            if (rating) {
+                const starsContainer = document.createElement('span');
+                starsContainer.className = 'stars-container';
+                starsContainer.innerHTML = displayStars(rating);
+
+                const dt = item.querySelector('dt');
+                const button = dt.querySelector('.detail-btn');
+                dt.insertBefore(starsContainer, button);
+            }
+        }
+    });
+}
+
+function drawSkillsChart() {
+    const canvas = document.getElementById('skillsChart');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    const width = canvas.width;
+    const height = canvas.height;
+
+    ctx.clearRect(0, 0, width, height);
+
+    const skills = Object.keys(skillRatings);
+    const ratings = Object.values(skillRatings);
+    const maxRating = 5;
+
+    const barWidth = 80;
+    const barSpacing = 40;
+    const chartHeight = height - 100;
+    const chartBottom = height - 50;
+    const startX = 50;
+
+    const colors = ['#3498db', '#e74c3c', '#2ecc71', '#f39c12'];
+
+    ctx.fillStyle = '#333';
+    ctx.font = 'bold 16px Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText('Auto-évaluation des Compétences', width / 2, 30);
+
+    ctx.strokeStyle = '#333';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(startX, chartBottom);
+    ctx.lineTo(width - 20, chartBottom);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(startX, chartBottom);
+    ctx.lineTo(startX, 60);
+    ctx.stroke();
+
+    for (let i = 0; i <= maxRating; i++) {
+        const y = chartBottom - (i / maxRating) * chartHeight;
+        ctx.fillStyle = '#666';
+        ctx.font = '12px Arial';
+        ctx.textAlign = 'right';
+        ctx.fillText(i.toString(), startX - 10, y + 5);
+
+        ctx.strokeStyle = '#ddd';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(startX, y);
+        ctx.lineTo(width - 20, y);
+        ctx.stroke();
+    }
+
+    skills.forEach((skill, index) => {
+        const rating = ratings[index];
+        const barHeight = (rating / maxRating) * chartHeight;
+        const x = startX + 30 + index * (barWidth + barSpacing);
+        const y = chartBottom - barHeight;
+
+        ctx.fillStyle = colors[index];
+        ctx.fillRect(x, y, barWidth, barHeight);
+
+        ctx.strokeStyle = '#333';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(x, y, barWidth, barHeight);
+
+        ctx.fillStyle = '#fff';
+        ctx.font = 'bold 18px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText(rating.toString(), x + barWidth / 2, y + barHeight / 2 + 7);
+
+        ctx.fillStyle = '#333';
+        ctx.font = '11px Arial';
+        ctx.textAlign = 'center';
+        const words = skill.split(' / ');
+        words.forEach((word, i) => {
+            ctx.fillText(word, x + barWidth / 2, chartBottom + 20 + i * 15);
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const detailButtons = document.querySelectorAll('.detail-btn');
     detailButtons.forEach(button => {
@@ -103,4 +226,7 @@ document.addEventListener('DOMContentLoaded', function() {
         skillName.addEventListener('mouseenter', showTooltip);
         skillName.addEventListener('mouseleave', hideTooltip);
     });
+
+    addStarsToSkills();
+    drawSkillsChart();
 });

@@ -68,3 +68,37 @@
 .tooltip.show {
     opacity: 1;
 }
+
+.stars-container {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.star {
+    font-size: 1.2rem;
+    margin-right: 2px;
+}
+
+.star.filled {
+    color: #f39c12;
+}
+
+.star.empty {
+    color: #ddd;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+#skillsChart {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
