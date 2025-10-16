@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/resume.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/details.css">
+    <link rel="stylesheet" href="css/skills.css">
     <script src="https://use.edgefonts.net/abril-fatface.js"></script>
+    <script src="js/details.js"></script>
 </head> 
  
 <body itemscope itemtype="https://schema.org/Person">
@@ -45,15 +48,27 @@
                     <strong itemprop="occupationTitle">Stagiaire Développeur Mobile</strong> – 
                     <span itemprop="employerOrganization">Océanopolis Tech</span>
                     (<span itemprop="startDate">Juin 2024</span> - <span itemprop="endDate">Août 2024</span>)
-                    <br>
-                    <span itemprop="description">Développement d'une application mobile de visite guidée en React Native.</span>
+                    <button class="detail-btn">+</button>
+                    <div class="details-content">
+                        <p>• Développement d'une application mobile de visite guidée en React Native</p>
+                        <p>• Intégration de fonctionnalités de géolocalisation et de réalité augmentée</p>
+                        <p>• Collaboration avec l'équipe UX/UI pour optimiser l'expérience utilisateur</p>
+                        <p>• Mise en place de tests unitaires et d'intégration</p>
+                        <p>• Technologies utilisées : React Native, TypeScript, Jest, Git</p>
+                    </div>
                 </li>
                 <li itemprop="hasOccupation" itemscope itemtype="https://schema.org/Occupation">
                     <strong itemprop="occupationTitle">Assistant Développeur</strong> – 
                     <span itemprop="employerOrganization">BreizhTech Solutions</span>
                     (<span itemprop="startDate">Juillet 2023</span>)
-                    <br>
-                    <span itemprop="description">Participation au développement d'une application web avec Angular.</span>
+                    <button class="detail-btn">+</button>
+                    <div class="details-content">
+                        <p>• Participation au développement d'une application web avec Angular</p>
+                        <p>• Création de composants réutilisables pour l'interface utilisateur</p>
+                        <p>• Intégration d'une API REST pour la gestion des données</p>
+                        <p>• Support dans la correction de bugs et l'amélioration des performances</p>
+                        <p>• Technologies utilisées : Angular 15, TypeScript, RxJS, SCSS</p>
+                    </div>
                 </li>
             </ul>
         </article>
@@ -61,14 +76,66 @@
         <section>
             <h2> <i class="fa fa-cogs"></i> Compétences</h2>
             <dl>
-                <dt itemprop="knowsAbout">React Native / Angular</dt>
-                <dd>Développement d'applications mobiles et web modernes</dd>
-                <dt itemprop="knowsAbout">Python / TensorFlow</dt>
-                <dd>Machine Learning et traitement de données</dd>
-                <dt itemprop="knowsAbout">Java / Spring Boot</dt>
-                <dd>Développement backend et APIs</dd>
-                <dt itemprop="knowsAbout">Docker / Git</dt>
-                <dd>DevOps et gestion de versions</dd>
+                <div class="skill-item">
+                    <dt>
+                        <span itemprop="knowsAbout">React Native / Angular</span>
+                        <button class="detail-btn">+</button>
+                    </dt>
+                    <dd>Développement d'applications mobiles et web modernes</dd>
+                    <div class="details-content">
+                        <ul>
+                            <li>Maîtrise complète du cycle de développement React Native</li>
+                            <li>Expérience avec les hooks React et la gestion d'état</li>
+                            <li>Développement de composants Angular réutilisables</li>
+                            <li>Intégration de services REST et gestion des états avec NgRx</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <dt>
+                        <span itemprop="knowsAbout">Python / TensorFlow</span>
+                        <button class="detail-btn">+</button>
+                    </dt>
+                    <dd>Machine Learning et traitement de données</dd>
+                    <div class="details-content">
+                        <ul>
+                            <li>Développement de modèles de Deep Learning avec TensorFlow</li>
+                            <li>Analyse et prétraitement de données avec Pandas et NumPy</li>
+                            <li>Visualisation de données avec Matplotlib et Seaborn</li>
+                            <li>Déploiement de modèles ML en production</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <dt>
+                        <span itemprop="knowsAbout">Java / Spring Boot</span>
+                        <button class="detail-btn">+</button>
+                    </dt>
+                    <dd>Développement backend et APIs</dd>
+                    <div class="details-content">
+                        <ul>
+                            <li>Création d'APIs RESTful avec Spring Boot</li>
+                            <li>Gestion de la persistance avec Spring Data JPA</li>
+                            <li>Sécurisation des APIs avec Spring Security</li>
+                            <li>Tests unitaires et d'intégration avec JUnit et Mockito</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <dt>
+                        <span itemprop="knowsAbout">Docker / Git</span>
+                        <button class="detail-btn">+</button>
+                    </dt>
+                    <dd>DevOps et gestion de versions</dd>
+                    <div class="details-content">
+                        <ul>
+                            <li>Conteneurisation d'applications avec Docker</li>
+                            <li>Gestion de versions avancée avec Git</li>
+                            <li>CI/CD avec GitHub Actions</li>
+                            <li>Déploiement et orchestration avec Docker Compose</li>
+                        </ul>
+                    </div>
+                </div>
             </dl>
         </section>
 

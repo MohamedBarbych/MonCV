@@ -1,0 +1,46 @@
+.detail-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    vertical-align: middle;
+}
+
+.detail-btn:hover {
+    background-color: var(--accent-color);
+}
+
+.details-content {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--background-light);
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+}
+
+/* Styles spécifiques pour la section compétences */
+dl > div {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+dl dt {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+dl dd {
+    margin-bottom: 5px;
+}
+
+dl .details-content {
+    margin-left: 20px;
+}

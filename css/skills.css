@@ -1,0 +1,41 @@
+/* Styles pour la section compétences */
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-item dt {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.skill-item dd {
+    margin-left: 1rem;
+    color: var(--text-color);
+}
+
+.skill-item .details-content {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.skill-item .details-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.skill-item .details-content li {
+    position: relative;
+    padding-left: 1.2em;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.skill-item .details-content li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
