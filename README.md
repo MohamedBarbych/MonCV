@@ -2,6 +2,14 @@
 
 Lien vers le CV en ligne : https://mohamedbarbych.github.io/MonCV/
 
+## Apercu
+
+### Version Desktop
+![CV Desktop](screenshots/cv-desktop.png)
+
+### Version Mobile
+![CV Mobile](screenshots/cv-mobile.png)
+
 ## A propos du projet
 
 Ce CV en ligne a ete developpe dans le cadre du TP HTML/CSS/JavaScript de l'UE Developpement Clients Web a l'Universite de Bretagne Occidentale.
